@@ -1,0 +1,12 @@
+<h1>Liste des Personnage</h1>
+
+<div *ngFor="let t of tabPersonnages; index as i ">
+
+<img [src]="t.image" width="100px">
+<h2><b> nom :{{t.nom}} </b></h2>
+<input type="checkbox" [checked]="t.majeur" [disabled]="t.majeur"/>
+<h4>nombre d'abonne {{t.nb}}</h4>
+<button (click)="plus(i)" >s'abonne</button>
+</div>
+<!-- partier 2-->
+ <h3>les nombre des majeur est {{total()}}</h3>

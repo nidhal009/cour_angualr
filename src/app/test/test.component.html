@@ -1,0 +1,23 @@
+<h1>{{name}}</h1>
+<p>{{age}}</p>
+<p>{{afficher()}}</p>
+
+<ng-container *ngIf="age>26;else min"> age est grat then 25</ng-container>
+
+<ng-template #min>
+<p>les persoone est mineur</p>
+</ng-template>
+
+
+<div [ngSwitch]="profil">
+    <p *ngSwitchCase="'Admin'"> Je suis l'administrateur</p>
+    <p *ngSwitchCase="'User'"> Je suis utilisateur</p>
+    <p *ngSwitchDefault> Erreur</p>
+    </div>
+
+
+    <p [ngStyle]="{color:getColor(),'font-style':style}">Paragraphe </p>
+    
+<p [ngClass]="{'c1':profil=='Admin','c2':profil=='User'}"> je suis paragraphe</p>
+
+    

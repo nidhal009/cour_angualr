@@ -1,0 +1,17 @@
+<p>liste des produit informatiques</p>
+<ul class="list-group">
+    <li [ngClass]=" {'list-group-item-info':item.etat=='endommagé', 'list-group-item':item.etat=='réparé' }" *ngFor="let item of materiels;index as i">
+        {{item.nom}} 
+        <img [src]="item.image" alt="" width="100px">
+        refrence {{item.reference}}
+        prix <p [ngClass]="{'badge rounded-pill bg-primary c1':item.prix>200, 'badge rounded-pill bg-warning':item.prix<200}">
+            <i class="fa-solid fa-wallet" *ngIf="item.prix>200"></i> {{item.prix}}
+          </p>
+          
+        etat {{item.etat}}
+        <ng-container *ngIf="item.etat=='endommagé'">
+                <button (click)="repare(i)" class="btn btn-primary"> Reparer</button>
+        </ng-container>
+        
+    </li>
+</ul>

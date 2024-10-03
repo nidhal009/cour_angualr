@@ -1,0 +1,14 @@
+<h1>Description du telephone</h1>
+<ul>
+    <li><img [src]="telephone.photo"/> </li>
+    <li>Marque {{telephone.marque}}</li>
+    <li>Modele {{telephone.modele}}</li>
+    <li><input type="radio" [checked]="isBas">Base Gamme </li>
+</ul>
+<button
+    type="button"
+    class="btn btn-primary"
+    (click)="show()"
+>detaile
+</button>
+
