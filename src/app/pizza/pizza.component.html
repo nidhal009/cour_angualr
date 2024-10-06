@@ -1,0 +1,24 @@
+
+
+
+<div class="d-flex justify-content-between " [ngClass]="{'bg-warning':!pizza.vegetarien}">
+<div >
+    <span class="badge bg-dark ">  {{pizza.nom}}</span>
+<img [src]="pizza.image" width="70px" class="rounded-circle "/>
+</div>
+<div> prix : {{pizza.prix}} Dt</div>
+
+<a href="#" (click)="ShowComment()">Afficher Commentaires</a>
+<div *ngIf="show">
+    <ul>
+    <li *ngFor="let comm of pizza.comments">
+        <app-comment-component [comm]="comm"></app-comment-component>
+    </li>
+</ul>
+    
+</div>
+</div>
+
+  
+  
+  
