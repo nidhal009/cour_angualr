@@ -1,0 +1,9 @@
+<p>listemployes !</p>
+
+<ul>
+    <li *ngFor="let t of tabEmploye">
+        Matricule {{t.matricule}} -Nom : {{t.nom}}
+            - Poste {{t.post}}
+    </li>
+</ul>
+<button (click)="DeleteFirstPersone()" class="btn btn-primary  "> Delete </button>

@@ -12,11 +12,13 @@ import { PersonnageComponent } from "./personnage/personnage.component";
 import { ListMatrielComponent } from "./list-matriel/list-matriel.component";
 import { ListpersonnesComponent } from "./listpersonnes/listpersonnes.component";
 import { ListPizzaComponent } from "./list-pizza/list-pizza.component";
+import { ListemployesComponent } from "./TP5/listemployes/listemployes.component";
+import { VoitureCompComponent } from "./ExCar/voiture-comp/voiture-comp.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, ToolbarComponent, ListComponent, FooterComponent, TestComponent, FormsModule, TelephoneComponent, PersonnageComponent, ListMatrielComponent, ListpersonnesComponent, ListPizzaComponent],
+  imports: [CommonModule, RouterOutlet, ToolbarComponent, ListComponent, FooterComponent, TestComponent, FormsModule, TelephoneComponent, PersonnageComponent, ListMatrielComponent, ListpersonnesComponent, ListPizzaComponent, ListemployesComponent, VoitureCompComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

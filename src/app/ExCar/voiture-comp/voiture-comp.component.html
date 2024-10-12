@@ -1,0 +1,22 @@
+<div class="container">
+<h1>liste des voitures </h1>
+<ul>
+    <div *ngIf="verife==true">
+        {{voiture.marque}} -- {{voiture.modele}}  -- {{voiture.numSerie}}
+
+
+    </div>
+    <div  *ngIf="verife==false">
+    <li *ngFor="let v of voiture">
+        {{v.marque}} -- {{v.modele}}  -- {{v.numSerie}}
+    </li>
+</div>
+</ul>
+<h2 class="pt-4">information sur les voitures </h2>
+<button type="button" class="btn btn-primary" (click)="GetByMarque('Ford')"> liste des Ford</button>
+<button type="button" class="btn btn-danger" (click)="GetByMarque('Renault')"> liste des Renault</button>
+<button type="button" class="btn btn-warning" (click)="GetNombreVoiture('Clio')"> Nombre des clio</button>
+<h4 class="pt-4">donner le numero de matircule </h4> <input type="input"   [(ngModel)]="nums"/> 
+<button type="button" class="btn btn-warning" (click)="search()">chercher</button>
+
+</div>
